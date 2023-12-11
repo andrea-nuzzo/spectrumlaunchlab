@@ -1,5 +1,5 @@
-import { websocketState,  } from "../store/spectrumWebSocket.state";
-import { spectrumDataState } from "../store/spectrumData.state";
+import { websocketState,  } from "@store/spectrumWebSocket.state";
+import { spectrumDataState } from "@store/spectrumData.state";
 import { SpectrumData } from "../types/spectrumData";
 
 let webSocket: WebSocket | null = null;

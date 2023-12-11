@@ -4,7 +4,7 @@ import { Line, Bar } from "react-chartjs-2";
 import { LineChartProps } from "@base/types/lineChartProps";
 import { Chart, registerables } from "chart.js";
 import { getColorForTemperature } from "@utils/getColotForTemperature";
-import { isAscendingArrayState } from "@store/isAscendingArrayState";
+import { isAscendingArrayState } from "@store/isAscendingArray.state";
 import { useSetRecoilState } from "recoil";
 import "./LineChart2d.style.scss";
 Chart.register(...registerables);
