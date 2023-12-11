@@ -1,13 +1,12 @@
-import React from 'react';
-import './App.scss';
-import WebSocketController from './components/Button/WebSocketController/WebSocketController';
-import StatusController from './components/Button/StatusController/StatusController';
+import "./App.scss";
+import Header from "@components/Header/Header";
+import LauchDashboard from "@components/LaunchDashboard/LaunchDashboard";
 
 function App() {
   return (
-    <div >
-     <StatusController/>
-     <WebSocketController/>
+    <div>
+      <Header />
+      <LauchDashboard />
     </div>
   );
 }

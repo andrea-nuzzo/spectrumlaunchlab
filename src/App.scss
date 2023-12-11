@@ -25,27 +25,18 @@
 :root {
   // Variables
   --multiplier: 6px;
-  --theme-color: #e12726;
   --color: rgb(255 255 255 / 100%);
   --font-family: 'colfax', sans-serif;
   --font-family-mono: 'blenderpro', monospace;
-  --border-color: #232323;
   --background-color: #171717;
-  --background-color-dark: #000;
-  --border: 1px solid var(--border-color);
-  --z-index-header: 999;
-  --z-index-modal: 1000;
-  --z-index-developer-stats: 1001;
-  --app-header-height: calc(var(--multiplier) * 9);
+
 
   // Color
-
   color-scheme: dark;
   color: var(--color);
   background-color: var(--background-color-dark);
 
   // Font
-
   font-family: var(--font-family);
   line-height: 1.5;
   font-weight: 400;
@@ -79,28 +70,12 @@ body {
   overflow-y: auto;
 }
 
-button {
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 2px;
-  background-color: #222;
-  border: 1px solid #555;
 
-  &:hover,
-  &:focus {
-      background-color: #333;
-  }
+body::-webkit-scrollbar {
+  display: none;
 }
 
-select {
-  cursor: pointer;
-  padding: 3px 4px;
-  border-radius: 2px;
-  background-color: #222;
-  border: 1px solid #555;
-
-  &:hover,
-  &:focus {
-      background-color: #333;
-  }
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
 }

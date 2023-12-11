@@ -1,4 +1,4 @@
-import { SpectrumData } from "../types/SpectrumData";
+import { SpectrumData } from "@base/types/spectrumData";
 
 export function transformKeysToPascalCase(data: SpectrumData): SpectrumData {
     const transformedData: any = {} ;

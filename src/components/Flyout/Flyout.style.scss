@@ -1,0 +1,214 @@
+.flyout {
+    position: fixed;
+    right: 0;
+    top: 80px;
+    height: calc(100% - 80px);;
+    width: 500px;
+    overflow: auto;
+    background: rgba(255,255,255,0.1);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    &.active {
+        transform: translateX(0);
+    }
+
+    &_box-title{
+        display: flex;
+        flex-direction: column;
+        flex: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background: rgba(35,44,48);
+        border-bottom: 1px solid rgba(255,255,255,0.5); 
+        z-index: 2; 
+        position: sticky;
+
+        & p, h3{
+            margin: 0px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        & p {
+            margin-bottom: 10px;
+        }
+    }
+
+    & .close_button{
+        position: absolute;
+        background: none;
+        right: 0;
+        top: 0;
+        margin: 10px;
+        padding: 2px;
+        border-radius: 5px;
+
+    }
+}
+
+.flyout::-webkit-scrollbar {
+    display: none;
+}
+
+.flyout {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+  .action {
+    color: #010B12;
+    background: none;
+    border: 2px solid #010B12;;
+    padding: 6 px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #010B12;
+        color: #FF6700;
+    }
+  }
+
+  .content {
+    padding:0;
+    margin:10% 15%;   
+}
+
+.close {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.close:hover{
+    color: #010B12;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+button.close {
+    padding: 6px;
+    background-color:rgb(35,44,48);
+    height: 100%;
+    cursor: pointer;
+
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-white {
+    border: 1px solid rgba(255,255,255,0.5); 
+    color: #ffffff;
+    padding-left: 61px;
+    position: relative;
+}
+
+.alert-white .icon {
+    text-align: center;
+    width: 45px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.alert-white .icon:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 1px solid #bdbdbd;
+    position: absolute;
+    border-left: 0;
+    border-bottom: 0;
+    top: 50%;
+    right: -6px;
+    margin-top: -5px;
+    background: #fff;
+}
+
+.alert-white.rounded {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.alert-white.rounded .icon {
+    border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+}
+
+.alert-white .icon .react-icon {
+    font-size: 20px;
+    color: #FFF;
+    left: 12px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+}
+
+.alert-white.alert-danger .icon,.alert-white.alert-danger .icon:after {
+    border: none;
+    background: #FF2400;
+}
+
+.message-content {
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column;
+    overflow: hidden;
+
+    strong, .status-message {
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .minimized_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 100px; 
+    right: 20px;
+    background-color:rgb(35,44,48);
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
+  
+    .badge {
+      position: absolute;
+      top: -8px;
+      right: -6px;
+      background-color: #FF2400; 
+      color: white;
+      border-radius: 50%;
+      padding: 5px; 
+      font-size: 0.75em; 
+      line-height: 1; 
+      min-width: 20px; 
+      height: 20px; 
+      text-align: center;
+    }
+  
+    
+    .fa-chevron-down {
+      font-size: 24px;
+    }
+  }

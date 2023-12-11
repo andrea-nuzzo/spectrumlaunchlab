@@ -1,6 +1,6 @@
 import { websocketState,  } from "../store/spectrumWebSocket.state";
 import { spectrumDataState } from "../store/spectrumData.state";
-import { SpectrumData } from "../types/SpectrumData";
+import { SpectrumData } from "../types/spectrumData";
 
 let webSocket: WebSocket | null = null;
 
@@ -8,7 +8,8 @@ const WEBSOCKET_URL = process.env.REACT_APP_SPECTRUM_WEBSOCKET_URL;
 
 export const connectWebSocket = (
   setWebSocketActive: (active: boolean) => void, 
-  setspectrumDataState: (newData: SpectrumData) => void) => {
+  setspectrumDataState: (newData: SpectrumData) => void,
+  onError: (errorMessage: string) => void)  => {
 
   if (webSocket) {
     console.warn("WebSocket already open.");
@@ -28,12 +29,12 @@ export const connectWebSocket = (
       const Timestamp = Date.now();
       const newData = { ...data, Timestamp };
       setspectrumDataState(newData);
-      console.log("WebSocket Data:", newData);
 
     };
 
     webSocket.onerror = (error) => {
       console.error('WebSocket error:', error);
+      onError("WebSocket connection error");
     };
 
     webSocket.onclose = () => {

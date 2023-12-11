@@ -1,0 +1,43 @@
+
+.container-ws{
+    display: flex;
+}
+
+.web-socker-controller {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color:rgb(35,44,48);;
+    cursor: pointer;
+
+   &.stop {
+    color: #010B12;
+    background-color: #ffffff;
+   }
+}
+
+.websocket-error-badge{
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.websocket-error-badge.fade-out {
+    animation: fadeOut 3s ease-in-out;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
